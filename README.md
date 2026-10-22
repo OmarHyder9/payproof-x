@@ -35,10 +35,14 @@ Then open `http://localhost:8080` from this directory.
 
 ## Deploy on GitHub Pages
 
-1. Create a **public** GitHub repository named `payproof-x` under your account.
-2. Upload `index.html`, `README.md`, `LICENSE`, and `.github/workflows/pages.yml` to the repository's default branch (`main`).
-3. In **Settings → Pages**, choose **GitHub Actions** as the build/deployment source if prompted.
-4. The included workflow deploys the static site from the `main` branch after each push. The published URL will look like `https://YOUR-USERNAME.github.io/payproof-x/`.
+The current repository is published as a static site. Recent GitHub Pages deployment runs succeeded, but the `.github/workflows/pages.yml` file is not present on the `main` branch. These instructions therefore describe branch-based deployment rather than a workflow that is not currently in the branch.
+
+1. Open **Settings → Pages** in this repository.
+2. Under **Build and deployment → Source**, select **Deploy from a branch**.
+3. Select branch `main` and folder `/(root)`, then save.
+4. Wait for the Pages deployment to complete and use the published URL shown in the Pages settings.
+
+If you later switch the Pages source to **GitHub Actions**, first add and review a dedicated workflow under `.github/workflows/` and verify that it completes successfully. Do not assume a workflow exists unless the file is present on the branch.
 
 ## Security and correctness notes
 
